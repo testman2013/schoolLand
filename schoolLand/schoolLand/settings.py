@@ -60,7 +60,7 @@ WSGI_APPLICATION = 'schoolLand.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'test',
+        'NAME': 'schoolLand',
 	'USER': 'root',
 	'PASSWORD': 'zzzzzz',
 	'HOST': '127.0.0.1',
@@ -80,6 +80,11 @@ USE_I18N = True
 USE_L10N = True
 
 USE_TZ = True
+
+AUTHENTICATION_BACKENDS = (
+    'schoolLand.backends.EmailAuthBackEnd',
+    'django.contrib.auth.backends.ModelBackend',
+)
 
 
 # Static files (CSS, JavaScript, Images)
