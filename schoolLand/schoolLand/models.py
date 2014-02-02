@@ -9,14 +9,19 @@ from django.contrib.auth.models import User
 #	user = models.ForeignKey
 	
 
-class UsersForm(ModelForm):
-	password = forms.CharField(widget=forms.PasswordInput())
-	class Meta:
-		model = User
-		fields = ['first_name', 'last_name', 'email', 'password'] 
-		#exclude = ['userName', 'middleName', 'createdTime']
-	def __init__(self, *args, **kwargs):
-		super(UsersForm,self).__init__(*args, **kwargs)
-		
-		for key in self.fields:
-			self.fields[key].required = True
+
+class images(models.Model):
+        image = models.ImageField(upload_to='images')
+        sectionId = models.IntegerField(null=True, blank=True)
+        active    = models.BooleanField(default=True)
+        createdTime = models.DateTimeField(auto_now_add=True, blank=True, null=True)
+        #imageName = models.CharField(max_length=100)
+        #caption   = models.CharField(max_length=400,null=True)
+        #active    = models.BooleanField(default=True)
+        #createdTime = models.DateTimeField(auto_now_add=True, blank=True, null=True)
+        
+class pdf(models.Model):
+        uploadedFile      = models.FileField(upload_to='files')
+        active            = models.BooleanField(default=True)
+        sectionId = models.IntegerField(null=True, blank=True)
+        createdTime       = models.DateTimeField(auto_now_add=True, blank=True, null=True)

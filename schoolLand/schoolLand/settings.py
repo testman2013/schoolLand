@@ -91,3 +91,4 @@ AUTHENTICATION_BACKENDS = (
 # https://docs.djangoproject.com/en/1.6/howto/static-files/
 
 STATIC_URL = '/static/'
+MEDIA_ROOT = 'C:\Job\learning\django\schoolLand\schoolLand\schoolLand\media/'
