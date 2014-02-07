@@ -1,0 +1,35 @@
+{% extends "schoolLand/base.html" %}
+{% block content %}
+{% if error_message %}
+<p>{{ error_message }}</p>
+{% endif %}
+
+<div>
+	{% for message in messages %}
+		<p>{{ message.user.first_name|add:" : "|add:message.message }}</p>
+	{% endfor %}
+
+</div>
+<form method="post">
+	{% csrf_token %}
+	<label>message: <input type="text" name="message" />
+	<input type="submit" value="Add">
+</form>
+
+
+{% endblock %}
+
+<!--
+{% csrf_token %}
+	<input type="text" name="firstName" id="firstName" />
+	<label for="firstName">*First Name</label><br />
+	<input type="text" name="lastName" id="lastName" />
+	<label for="LastName">Last Name</label><br />
+	<input type="text" name="email" id="email" />
+	<label for="email">*Email Address</label><br />
+	<input type="text" name="password" id="password" />
+	<label for="firstName">*Password</label><br />
+	<input type="submit" value="Submit" />
+--!>
+
+

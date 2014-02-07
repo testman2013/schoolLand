@@ -1,3 +1,36 @@
+a {text-decoration:none; font-family: georgia, serif;}
+
+
 body{
-	background: #0c2d5f url("images/main_body_bg.png") no-repeat center top;
+	background: #0c2d5f url("images/background.jpg") no-repeat center top;
 }
+
+
+
+/*
+*
+* Header
+*/
+
+#header{width: 100%; position: relative;}
+
+#logo-section{ width: 310px; height:200px; float:left; border: 1px solid #e1e1e1;}
+
+#menu-section{width: 650px; height:200px; float: right; border: 1px solid #e1e1e1;}
+
+#menu-section .horizontal-menus{margin:0; padding:0; margin-top: 65px;}
+#menu-section .horizontal-menus li{display: block; float: left; padding: 0 30px;}
+
+
+/*
+* Content
+*/
+
+#content{width: 100%; position: relative}
+
+
+/*
+* Footer
+*/
+
+#footer{width: 100%; position: relative}

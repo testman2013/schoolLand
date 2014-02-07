@@ -16,4 +16,5 @@ urlpatterns = patterns('',
     url(r'^signUp/$', views.signUp, name="signUp"),
     url(r'^signIn/$', views.signIn, name="signIn"),
     url(r'^signOut/$', views.signOut, name="signOut"),
-)
+    url(r'^message/$', views.message, name="message"),
+) + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

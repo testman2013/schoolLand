@@ -25,3 +25,8 @@ class pdf(models.Model):
         active            = models.BooleanField(default=True)
         sectionId = models.IntegerField(null=True, blank=True)
         createdTime       = models.DateTimeField(auto_now_add=True, blank=True, null=True)
+
+class messages(models.Model):
+        message = models.TextField(null=True, blank=True)
+        user    = models.ForeignKey(User)
+        createdTime = models.DateTimeField(auto_now_add=True, blank=True, null=True)
